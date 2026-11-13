@@ -21,15 +21,23 @@ pip install speedtest-cli
 ## Uso
 
 ```bash
-python "testeo red sermantec.py"
+python auditoria_red.py
 ```
 
-En la carpeta `dist/` hay una versión compilada (`.exe`) hecha con PyInstaller, que se ejecuta sin instalar Python.
+El informe se guarda en la carpeta actual como `Auditoria_Red_AAAA-MM-DD_HH-MM.txt`.
+
+### Crear un ejecutable (opcional)
+
+Con [PyInstaller](https://pyinstaller.org) se puede generar un `.exe` que corre sin instalar Python:
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile auditoria_red.py
+```
 
 ## Archivos
 
-- `testeo red sermantec.py`: script principal.
-- `testeo red sermantec.spec`, `build/` y `dist/`: compilación con PyInstaller.
+- `auditoria_red.py`: script principal.
 - `use Asignaturas_Inscritas.js`: práctica de MongoDB (base de datos no relacional). No forma parte del script de red.
 
 ## Autor

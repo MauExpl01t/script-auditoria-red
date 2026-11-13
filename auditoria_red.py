@@ -6,7 +6,7 @@ import time
 
 def generar_reporte_auditoria():
     fecha_hoy = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
-    filename = f"Auditoria_Red_Sermantec_{fecha_hoy}.txt"
+    filename = f"Auditoria_Red_{fecha_hoy}.txt"
     
     print("--- 🚀 Iniciando Auditoria de Red y Velocidad ---")
     
@@ -15,7 +15,8 @@ def generar_reporte_auditoria():
     
     try:
         # 1. Test de Velocidad Interno con Seguridad
-        try:           print("Midiendo Speedtest Interno (Espere un momento)...")
+        try:
+            print("Midiendo Speedtest Interno (Espere un momento)...")
             # Usamos secure=True para evitar el Error 403 Forbidden
             st = speedtest.Speedtest(secure=True)
             st.get_best_server()
@@ -40,7 +41,7 @@ def generar_reporte_auditoria():
 
         with open(filename, "w") as f:
             f.write("==============================================\n")
-            f.write("      INFORME DE AUDITORIA RED SERMANTEC      \n")
+            f.write("        INFORME DE AUDITORIA DE RED          \n")
             f.write(f"      FECHA Y HORA: {fecha_hoy}              \n")
             f.write("==============================================\n\n")
             
